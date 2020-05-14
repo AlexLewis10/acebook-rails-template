@@ -8,8 +8,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    @posts = logged_in_user.posts
+    @posts = logged_in_user.posts # change this now  
+
+    # we want  it to show the id of what is  in  the routes post 
+    # @posts  = another user(which equal the id of what is in the routes) or the logged_in_user.posts
+   @posts  = find_owner(post).post
   end 
+
+
 
   private
 

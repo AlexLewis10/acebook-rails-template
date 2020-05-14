@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:session][:name])
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
+      # maybe this one? 
       redirect_to user_path(user.id)
     end
   end
@@ -15,3 +16,4 @@ class SessionsController < ApplicationController
     redirect_to sessions_new_path
   end
 end
+

@@ -1,5 +1,7 @@
 <h1>GAPAGbook</h1>
 <% @posts.each do |post| %>
+  <p>@<%= find_owner(post)%></p>
+
   <p><%= post.message %></p>
   <p><%= button_to "Delete post", post_path(post), method: :delete %></p>
   <p><%= button_to "Edit post", edit_post_path(post), method: :get%></p>
