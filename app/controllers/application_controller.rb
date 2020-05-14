@@ -18,4 +18,10 @@ helper_method :find_owner
     User.find(post.user_id).name
   end 
 
+helper_method :find_id
+  def find_id(post)
+    post.user_id
+  end 
+
+
 end
