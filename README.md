@@ -4,7 +4,7 @@ https://gapag1.herokuapp.com/
 
 This project is part of weeks 8 and 9 of Makers Academy. The focus of the project was to practice AGILE methodologies and ceromonies, such as standups and sprint planning sessions, as well as learning Ruby on Rails along the way.
 
-Project requirements were specified by Makers coaches who acted as the client. We were given a set of requirements at the start of the first week and the second week.
+Project requirements were specified by Makers coaches who acted as the client. We were given a set of requirements at the start of the first week and again in the second week.
 
 ## Team Members
 - [Gina Frankel](https://github.com/Gina-Frankel)
