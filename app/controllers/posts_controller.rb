@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = logged_in_user
+    @post.wall_id = session[:wall_id]
     @post.save
     redirect_to user_path(@post.user.id)
   end

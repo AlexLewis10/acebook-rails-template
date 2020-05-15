@@ -5,6 +5,9 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
   has_secure_password
   validates :password, presence: true, length: { in: 6..10 }
-  has_many :posts
   
+  has_many :posts, :class_name => "Post", :foreign_key => :user_id #my_wall_posts
+  has_many :locations, :class_name => "Post", :foreign_key => :user_id # recipient_posts
+  #specify foreign key  
+  # has_many :credits, :class_name => "Expense", :foreign_key => :creditor_id 
 end

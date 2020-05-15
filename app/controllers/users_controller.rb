@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @wall_user = User.find(params[:id])
+    session[:wall_id] = params[:id]
     @posts = @wall_user.posts
   end 
 

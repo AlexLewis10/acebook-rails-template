@@ -18,10 +18,21 @@ helper_method :find_owner
     User.find(post.user_id).name
   end 
 
-helper_method :find_id
+helper_method :find_id # of owner
   def find_id(post)
     post.user_id
   end 
+
+helper_method :wall_user 
+  def wall_user(post)
+    @saved_wall_user = User.find(post.user_id)
+  end
+
+
+  helper_method :wall_owner
+    def wall_owner
+      @saved_wall_user #.id
+    end 
 
 
 end
