@@ -103,6 +103,11 @@ I would like to be able to post on my friends wall
 ### Tables 
 ![](readme_pictures/tables.png)
 
+### Styling 
+![](readme_pictures/scrnsht_login.png)
+
+![](readme_pictures/scrnsht_homepage.png)
+
 ## Quickstart
 
 

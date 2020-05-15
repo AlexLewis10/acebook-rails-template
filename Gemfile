@@ -14,7 +14,7 @@ gem 'pg'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-#css style helper
+# css style helper
 gem "bulma-rails", "~> 0.8.0"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'uglifier', '>= 1.3.0'
