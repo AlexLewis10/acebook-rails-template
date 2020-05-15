@@ -1,24 +1,31 @@
 <% if @wall_user.id == logged_in_user.id %>
-<h1>Welcome to your wall, <%= logged_in_user.name %>!</h1>
+  <h1>Welcome to your wall, <%= logged_in_user.name %>!</h1>
 <% else %>
-<h1><%= @wall_user.name%>'s Wall</h1>
+  <h1><%= @wall_user.name%>'s Wall</h1>
 <% end %>
 
 
-<p><%= link_to new_post_path do %>
-  New post
-<% end %></p>
+<p>
+  <%= link_to new_post_path do %>
+    New post
+  <% end %>
+</p>
 
-  <% @posts.each do |post| %>
+<% @posts.each do |post| %>
+  <%= link_to user_path(find_id(post)) do %>
+    <p>@<%= find_owner(post)%><p>
+  <% end %>
   <p><%= post.message %></p>
   <p><%= post.created_at.strftime("%I:%M%p on %m/%d/%Y") %></p>
   <% if post.user.id == logged_in_user.id %>
-  <p><%= button_to "Delete post", post_path(post), method: :delete %></p>
-  <p><%= button_to "Edit post", edit_post_path(post), method: :get %></p>
+    <p><%= button_to "Delete post", post_path(post), method: :delete %></p>
+    <p><%= button_to "Edit post", edit_post_path(post), method: :get %></p>
   <% end %>
-  <% end %>
+<% end %>
 
-<p><%= link_to posts_path do %>
-  Home
-<% end %></p>
+<p>
+  <%= link_to posts_path do %>
+    Home
+  <% end %>
+</p>
 
