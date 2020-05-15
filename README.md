@@ -23,6 +23,7 @@ Project requirements were specified by Makers coaches who acted as the client. W
 | CI/CD         | Travis         |
 | Hosting       | Heroku         |
 | Databases     | postgresql     |
+| Styling      |   Bulma        |
 | Encryption    | Bcrypt         |
 | Codequality   | Rubocop, SimpleCov, Rubycritic |
 
