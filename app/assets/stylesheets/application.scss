@@ -1,3 +1,23 @@
+@import "bulma";
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoimage {
+    max-width: 150px;
+    margin: 0px;
+}
+#timecreated {
+    font-size: 0.5rem;
+}
+#loggedinusermsg {
+    font-size: 0.5rem;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
