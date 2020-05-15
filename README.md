@@ -2,6 +2,7 @@
 - Dependencies
 - Install postgres
 - Screenshot from the css
+- heroku link
 
 # GAPAGbook 
 
