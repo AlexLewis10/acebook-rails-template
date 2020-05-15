@@ -17,4 +17,3 @@ class SessionsController < ApplicationController
     redirect_to sessions_new_path
   end
 end
-

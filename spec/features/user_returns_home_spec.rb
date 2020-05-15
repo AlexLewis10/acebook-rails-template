@@ -8,4 +8,3 @@ RSpec.feature 'user can return home', type: :feature do
     expect(page).to have_content('Homepage')
   end
 end
-
