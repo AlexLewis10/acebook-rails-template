@@ -1,17 +1,24 @@
 class UsersController < ApplicationController
+
+  before_action :redirect_null_user, only: [:show]
+
   def new
+    @user = User.new
   end
 
   def create
-    User.create(user_params)
-    redirect_to posts_path
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to user_path(@user.id)
+    else
+      render :new
+    end
   end
 
   def show
-    @posts = logged_in_user.posts # change this now  
-    # we want  it to show the id of what is  in  the routes post 
-    # @posts  = another user(which equal the id of what is in the routes) or the logged_in_user.posts
-   #@posts  = find_owner(@post).post
+    @wall_user = User.find(params[:id])
+    @posts = @wall_user.posts
   end 
 
 
