@@ -1,22 +1,38 @@
-<h1>GAPAGbook</h1>
-<% @posts.each do |post| %>
-  
-  <%= link_to user_path(find_id(post)) do %>
-    <p>@<%= find_owner(post)%><p>
-  <% end %>
+<section class="hero center has-background-white">
+    <div class="hero-body center">
+        <div class="container">
+            <figure class="image center" id="logoimage">
+                <%= image_tag  "logo.png" %>
+            </figure>
+        <div>
+        <div class="container">
+            <a id="navnewpost" href="/posts/new/">New Post</a>
+        </div>
+        <%= link_to user_path(logged_in_user.id) do %>
+        <p>Your Profile<p>
+        <% end %>
+    </div>
+<section>
+<strong class= "center"> Homepage </strong>
 
+<% @posts.order(created_at: :desc).each do |post| %>
 
+<section id="postsbody">
+  <div class="notification container">
+    <div class="hero center">
+      <%= link_to user_path(find_id(post)) do %>
+        <p>@<%= find_owner(post)%><p>
+      <% end %>
 
-  <p><%= post.message %></p>
-  <% if post.user.id == logged_in_user.id %>
-  <p><%= button_to "Delete post", post_path(post), method: :delete %></p>
-  <p><%= button_to "Edit post", edit_post_path(post), method: :get%></p>
-  <% end %>
-  
-  
+      <p><%= post.message %></p>
+      <% if post.user.id == logged_in_user.id %>
+      <p><%= button_to "Delete post", post_path(post), method: :delete %></p>
+      <p><%= button_to "Edit post", edit_post_path(post), method: :get%></p>
+      <% end %>
+      <p id="timecreated">Posted: <%= post.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+      </div>
+  </div>
+</section>
 <% end %>
 
-<%= link_to new_post_path do %>
-  New post
-<% end %>
 

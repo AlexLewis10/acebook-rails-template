@@ -1,6 +1,18 @@
+<section class="hero center has-background-white">
+    <div class="hero-body center">
+        <div class="container">
+            <figure class="image center" id="logoimage">
+                <%= image_tag  "logo.png" %>
+            </figure>
+        <div>
+    </div>
+<section>
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>
 
   <%= form.submit "Submit" %>
 <% end %>
+<div class="container">
+    <a href="/posts"> Home </a>
+</div>

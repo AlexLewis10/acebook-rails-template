@@ -1,3 +1,12 @@
+<section class="hero center has-background-white">
+    <div class="hero-body center">
+        <div class="container">
+            <figure class="image center" id="logoimage">
+                <%= image_tag  "logo.png" %>
+            </figure>
+        <div>
+    </div>
+<section>
 <h1>Edit Post</h1>
 
 <%= form_with(model: @post, local: true) do |form| %>
@@ -14,4 +23,7 @@
   </p>
 
 <% end %>
+<div class="container">
+    <a href="/posts"> Home </a>
+</div>
 
