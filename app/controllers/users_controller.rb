@@ -19,8 +19,9 @@ class UsersController < ApplicationController
   def show
     @wall_user = User.find(params[:id])
     @posts = @wall_user.posts
-    
   end 
+
+
 
   private
 
