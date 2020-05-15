@@ -1,8 +1,3 @@
-
-- Dependencies
-- Screenshot from the css
-
-
 # GAPAGbook 
 
 https://gapag1.herokuapp.com/
@@ -121,6 +116,8 @@ First, clone this repository. Then:
 > bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
 ```
+Further info on using Travis and Heroku are in the wiki
+
 You may also need to install postgresql on your machine. On your command line;
 
 ```
