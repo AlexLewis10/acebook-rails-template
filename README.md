@@ -1,6 +1,7 @@
 
 - Dependencies
 - Install postgres
+- Screenshot from the css
 
 # GAPAGbook 
 
