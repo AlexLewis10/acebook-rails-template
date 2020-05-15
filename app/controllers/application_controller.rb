@@ -12,16 +12,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
-# linked to  the posts/show.html
-helper_method :find_owner
+  # linked to  the posts/show.html
+  helper_method :find_owner
+
   def find_owner(post)
     User.find(post.user_id).name
   end 
 
-helper_method :find_id
+  helper_method :find_id
+
   def find_id(post)
     post.user_id
   end 
-
-
 end

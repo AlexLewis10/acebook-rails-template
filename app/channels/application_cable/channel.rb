@@ -4,4 +4,3 @@ module ApplicationCable
   end
 end
 # :nocov:
-

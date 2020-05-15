@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   before_action :redirect_null_user, only: [:show]
 
   def new
@@ -19,9 +18,7 @@ class UsersController < ApplicationController
   def show
     @wall_user = User.find(params[:id])
     @posts = @wall_user.posts
-  end 
-
-
+  end
 
   private
 

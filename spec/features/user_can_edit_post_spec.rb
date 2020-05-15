@@ -25,9 +25,10 @@ RSpec.feature "Edit Post", type: :feature do
     click_on "Log in"
     visit "/users/#{@gina.id}"
     expect(page).not_to have_button("Edit post")
+    expect(page).not_to have_button("Delete post")
   end
 
-  scenario "cannot edit post on home page if not the owner" do
+  scenario "cannot edit or delete post on home page if not the owner" do
     @gina = User.create(name: "Gina", password: "123456", email: "gina@example.com")
     @alex = User.create(name: "Alex", password: "abcdef", email: "alex@example.com")
     log_in_gina
@@ -40,5 +41,6 @@ RSpec.feature "Edit Post", type: :feature do
     click_on "Log in"
     click_on "Home"
     expect(page).not_to have_button("Edit post")
+    expect(page).not_to have_button("Delete post")
   end
 end

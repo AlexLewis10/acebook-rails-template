@@ -1,4 +1,4 @@
-require  'rails_helper'
+require 'rails_helper'
 
 RSpec.feature "user can visit other profiles", type: :feature do
   scenario "user can see who posted the post" do
@@ -7,7 +7,6 @@ RSpec.feature "user can visit other profiles", type: :feature do
     click_link "New post"
     fill_in "Message", with: "Hello!!!"
     click_on "Submit"
-    visit '/posts'
     expect(page).to have_content("@Gina")
   end
 
@@ -17,16 +16,8 @@ RSpec.feature "user can visit other profiles", type: :feature do
     click_link "New post"
     fill_in "Message", with: "Hello!!!"
     click_on "Submit"
-    visit '/posts'
     click_on "@Gina"
     id = gina.id
     expect(page).to have_current_path "/users/#{id}"
   end
-
-  
-
 end 
-
-
-
-  # "user can see how posted the post"
