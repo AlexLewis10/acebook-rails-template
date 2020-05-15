@@ -25,5 +25,3 @@ RSpec.feature "See my posts on wall", type: :feature do
     expect(page).not_to have_content("Hello")
   end
 end
-
-
