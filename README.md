@@ -1,10 +1,11 @@
 
 - Dependencies
-- Install postgres
 - Screenshot from the css
-- heroku link
+
 
 # GAPAGbook 
+
+https://gapag1.herokuapp.com/
 
 This project is part of weeks 8 and 9 of Makers Academy. The focus of the project was to practice AGILE methodologies and ceromonies, such as standups and sprint planning sessions, as well as learning Ruby on Rails along the way.
 
@@ -46,6 +47,25 @@ As a user,
 When signing in, if I enter incorrect details,
 I would like to recieve a prompt to enter my details again
 
+As a user,
+So I can give updates about my life,
+I would like to make posts on my wall
+
+As a user,
+If I want to change a post,
+I can either update or delete a post
+
+As a user, 
+So I can understand other people's posts better,
+I would like to be able to see who made the post and at what time
+
+As a user,
+I want my friends to be able to see my news,
+I would like my newest posts to appear first
+
+As a user,
+So that I can see what eveeryone has been doing
+I would like to be able to see all posts in one page
 
 ```
 **Week 2**
@@ -75,6 +95,12 @@ So that I can post on my friends wall,
 I would like to be able to post on my friends wall
 ```
 
+## Further Requirements
+
+- The project should be hosted online so that everyone can visit the website.
+- The project should have CI/CD.
+- To ensure code quality, test coverage should be over 90% and have code quality and code style checks
+
 
 ### Mockup  
 ![](readme_pictures/mockup.png)
@@ -85,7 +111,7 @@ I would like to be able to post on my friends wall
 ## Quickstart
 
 
-## how to install and run it.
+## How to install and run it.
 First, clone this repository. Then:
 
 ```bash
@@ -94,6 +120,12 @@ First, clone this repository. Then:
 > bin/rails db:migrate
 > bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
+```
+You may also need to install postgresql on your machine. On your command line;
+
+```
+$ brew install postgresql
+$ brew services start postgresql
 ```
 
 ## How to run tests  
